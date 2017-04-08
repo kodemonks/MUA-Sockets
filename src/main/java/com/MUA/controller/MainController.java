@@ -91,6 +91,7 @@ public class MainController {
 	public ModelAndView inbox(@RequestParam(value = "pageNum", required = false) String pageNum,ModelMap model)
 			throws IOException {
 
+				
 		int step = 10;
 		if (
 			pageNum == null) {
@@ -272,7 +273,7 @@ public class MainController {
 			EmailDataBean singleBean = em.parseMessage(messageBody, messageId);
 			totalEmailData.add(singleBean);
 
-			if(counter++>150)
+			if(counter++>90)
 			{
 				count = counter;
 				break;
